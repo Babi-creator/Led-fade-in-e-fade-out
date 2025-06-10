@@ -1,0 +1,16 @@
+int Ledpin = 9; // Porta PWM
+void setup() { 
+pinMode (Ledpin, OUTPUT);
+}
+void loop() {
+// Fade in
+for (int brilho = 0; brilho <= 255; brilho++) {
+analogwrite(Ledpin, brilho);
+delay(10);
+}
+// Fade out
+for (int brilho = 255; brilho >= 0, brilho--) {
+analogWrite(Ledpin, brilho);
+delay(10);
+}
+}
